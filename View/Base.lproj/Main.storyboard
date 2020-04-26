@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iJR-fA-6GJ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hangman View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HangmanViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sa-ew-Nmf">
+                                <rect key="frame" x="6" y="413" width="371" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3rz-h7-svS">
+                                <rect key="frame" x="179" y="660" width="50" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Incorrect Guesses: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OZ-lA-X35">
+                                <rect key="frame" x="6" y="516" width="402" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rwh-dk-SAA">
+                                <rect key="frame" x="71" y="109" width="262" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsq-A9-cbq">
+                                <rect key="frame" x="20" y="36" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="newGameFunc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dHa-uJ-VBY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESO-GO-xCh">
+                                <rect key="frame" x="347" y="36" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Quit"/>
+                                <connections>
+                                    <action selector="quitGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G7Y-yI-4O0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBc-4o-aGa">
+                                <rect key="frame" x="181" y="751" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Guess"/>
+                                <connections>
+                                    <action selector="guess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Pa-5s-hgQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CFj-P6-Jfc"/>
+                    <connections>
+                        <outlet property="Letters" destination="7Sa-ew-Nmf" id="qrX-lF-Os6"/>
+                        <outlet property="guessButton" destination="PBc-4o-aGa" id="vX7-PK-O2Z"/>
+                        <outlet property="incorrectGuesses" destination="6OZ-lA-X35" id="yQx-7L-asx"/>
+                        <outlet property="letterInput" destination="3rz-h7-svS" id="P2T-GI-7at"/>
+                        <outlet property="newGame" destination="fsq-A9-cbq" id="UcT-iN-NeK"/>
+                        <outlet property="progression" destination="Rwh-dk-SAA" id="kQn-zZ-f7p"/>
+                        <outlet property="quit" destination="ESO-GO-xCh" id="nKE-27-6Nj"/>
+                        <segue destination="iJR-fA-6GJ" kind="show" identifier="segue" id="MAq-v9-CcH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+        <!--Main Menu View-->
+        <scene sceneID="HMy-rd-uOy">
+            <objects>
+                <viewController id="iJR-fA-6GJ" customClass="MainMenuView" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cn8-H2-WlI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Syy-oF-w68">
+                                <rect key="frame" x="168" y="557" width="78" height="30"/>
+                                <state key="normal" title="Play Game!"/>
+                                <connections>
+                                    <action selector="launchGame:" destination="iJR-fA-6GJ" eventType="touchUpInside" id="aH7-Uz-txg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hangman!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJ4-xM-xYW">
+                                <rect key="frame" x="167.5" y="410.5" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p9L-Vp-LIK">
+                                <rect key="frame" x="71" y="109" width="273" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Syy-oF-w68" firstAttribute="top" secondItem="kJ4-xM-xYW" secondAttribute="bottom" constant="125.5" id="Uuk-2i-eqb"/>
+                            <constraint firstItem="Syy-oF-w68" firstAttribute="height" secondItem="kJ4-xM-xYW" secondAttribute="height" multiplier="1.42857" id="fYZ-Qb-iqa"/>
+                            <constraint firstItem="kJ4-xM-xYW" firstAttribute="centerY" secondItem="cn8-H2-WlI" secondAttribute="centerY" id="gPq-Jp-JvN"/>
+                            <constraint firstItem="Syy-oF-w68" firstAttribute="centerX" secondItem="kJ4-xM-xYW" secondAttribute="centerX" id="iG2-9Y-Klg"/>
+                            <constraint firstItem="kJ4-xM-xYW" firstAttribute="centerX" secondItem="cn8-H2-WlI" secondAttribute="centerX" id="xzX-8q-fk1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6rA-3u-fXA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aEV-C1-Lle"/>
+                    <connections>
+                        <outlet property="logo" destination="p9L-Vp-LIK" id="CUE-J3-z6b"/>
+                        <outlet property="play" destination="cn8-H2-WlI" id="KQ5-a1-9NV"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toGame" id="cc2-NS-6CD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ig4-OS-xGM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+</document>
